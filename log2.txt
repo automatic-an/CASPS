@@ -1,0 +1,3 @@
+2022-11-17 18:09:10.199613: tiktok or youtube video uploading failed
+2022-11-17 18:10:16.093711: tiktok or youtube log in failed
+2022-11-17 18:19:45.645440: tiktok or youtube video uploading failed2022-11-18 11:21:13.565323: tiktok or youtube video uploading failed2022-11-18 11:29:32.557267: tiktok or youtube video uploading failed
