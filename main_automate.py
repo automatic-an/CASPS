@@ -20,8 +20,8 @@ multip_path = f"./multip_timeouts.txt"
 
 def video_main(numb_of_uploads: int, provider: str, speaker_index: int, min_video_lenght: int, video_folder: str, gma: str, pas: str, saying: str, hashtags: str, tiktok_on: bool, tik_nam: str, tik_pas: str, subreddits: list, subreddits_weight: list, keywords= "incoming_upgrade"):
 
-    driver = uc.Chrome(browser_executable_path="C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",use_subprocess=True)
-    #driver = uc.Chrome(use_subprocess=True)
+    #driver = uc.Chrome(browser_executable_path="C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",use_subprocess=True)
+    driver = uc.Chrome(use_subprocess=True)
     wait = WebDriverWait(driver, 45)
 
     try:
@@ -65,6 +65,7 @@ def video_main(numb_of_uploads: int, provider: str, speaker_index: int, min_vide
         file = open(f_path2, "a+")
         file.write(f"\n{current_time}: tiktok or youtube log in failed\n")
         file.close()
+        return
 
 
     for i in range(numb_of_uploads):
@@ -152,12 +153,8 @@ def video_main(numb_of_uploads: int, provider: str, speaker_index: int, min_vide
             file = open(f_path2, "a+")
             file.write(f"{current_time}: tiktok or youtube video uploading failed")
             file.close()
-            break
-    try:
-        driver.quit()
-    except:
-        pass
-
+    
+    driver.quit()
 
 
 # TIMEOUT IMPLEMENTED WITH MULTIPROCESSING
