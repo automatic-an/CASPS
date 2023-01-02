@@ -2,3 +2,6 @@
 contentBot/assets/*
 accounts_tik.txt
 accounts_yt.txt
+contentBot/reddit/__pycache__/
+contentBot/utils/__pycache__/
+contentBot/__pycache__

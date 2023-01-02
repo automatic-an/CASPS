@@ -100,18 +100,18 @@ def video_main(numb_of_uploads: int, provider: str, speaker_index: int, min_vide
             rand_time = randint(6,12)
             sleep(rand_time)
             rand_del = randint(14,23)
-            wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[1]/ytcp-social-suggestions-textbox/ytcp-form-input-container/div[1]/div[2]/div/ytcp-social-suggestion-input/div"))).click()
-            sleep(randint(1,3))
-            wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[1]/ytcp-social-suggestions-textbox/ytcp-form-input-container/div[1]/div[2]/div/ytcp-social-suggestion-input/div"))).send_keys(Keys.BACKSPACE*rand_del)
-            sleep(randint(1,3))
-            wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[1]/ytcp-social-suggestions-textbox/ytcp-form-input-container/div[1]/div[2]/div/ytcp-social-suggestion-input/div"))).send_keys(video_title)
+            wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[1]/ytcp-social-suggestions-textbox/ytcp-form-input-container/div[1]/div[2]/div/ytcp-social-suggestion-input/div"))).click()
+            sleep(randint(4,7))
+            wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[1]/ytcp-social-suggestions-textbox/ytcp-form-input-container/div[1]/div[2]/div/ytcp-social-suggestion-input/div"))).send_keys(Keys.BACKSPACE*rand_del)
+            sleep(randint(4,7))
+            wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[1]/ytcp-social-suggestions-textbox/ytcp-form-input-container/div[1]/div[2]/div/ytcp-social-suggestion-input/div"))).send_keys(video_title)
             #wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[1]/ytcp-social-suggestions-textbox/ytcp-form-input-container/div[1]/div[2]/div/ytcp-social-suggestion-input/div"))).send_keys('Redditors telling some "REAL LIFE" advice and experiences. #shorts')
-            sleep(randint(2,5))
-            wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[2]/ytcp-social-suggestions-textbox/ytcp-form-input-container/div[1]/div[2]/div/ytcp-social-suggestion-input/div"))).click()
-            sleep(randint(1,3))
-            wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[2]/ytcp-social-suggestions-textbox/ytcp-form-input-container/div[1]/div[2]/div/ytcp-social-suggestion-input/div"))).send_keys(hashtags)
-            sleep(randint(1,4))
-            wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[5]/ytkc-made-for-kids-select/div[4]/tp-yt-paper-radio-group/tp-yt-paper-radio-button[2]"))).click()
+            sleep(randint(4,7))
+            wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[2]/ytcp-social-suggestions-textbox/ytcp-form-input-container/div[1]/div[2]/div/ytcp-social-suggestion-input/div"))).click()
+            sleep(randint(4,7))
+            wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[2]/ytcp-social-suggestions-textbox/ytcp-form-input-container/div[1]/div[2]/div/ytcp-social-suggestion-input/div"))).send_keys(hashtags)
+            sleep(randint(4,7))
+            wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-basics/div[5]/ytkc-made-for-kids-select/div[4]/tp-yt-paper-radio-group/tp-yt-paper-radio-button[2]"))).click()
             next_button = "/html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[2]/div/div[2]/ytcp-button[2]"
             sleep(randint(1,3))
             wait.until(EC.element_to_be_clickable((By.XPATH, next_button))).click()
@@ -161,7 +161,7 @@ def video_main(numb_of_uploads: int, provider: str, speaker_index: int, min_vide
 # FORK FROM: https://flipdazed.github.io/blog/quant%20dev/parallel-functions-with-timeouts
 
 
-def _lemmiwinks(func: Callable, args: Tuple[object], kwargs: Dict[str, object], q: multiprocessing.Queue):
+def _lemmiwinks(func: Callable, args: Tuple[object], kwargs: Dict[str, object], q: multiprocessing.Manager):
     """lemmiwinks crawls into the unknown"""
     q.put(func(*args, **kwargs))
 
@@ -170,12 +170,12 @@ def _lemmiwinks(func: Callable, args: Tuple[object], kwargs: Dict[str, object], 
 def main_with_timeout(numb_of_uploads: int, timeout: int, provider: str, voice: int, min_video_lenght: int, video_folder: str, gma: str, pas: str, saying: str, hashtags: str, tiktok_on: bool, tik_nam: str, tik_pas: str, subreddits: list, subreddits_weight: list):
 
     try:
-        q_worker = multiprocessing.Queue()
+        q_worker = multiprocessing.Manager().Queue()
         proc = multiprocessing.Process(target=_lemmiwinks, args=(video_main, (numb_of_uploads,provider,voice,min_video_lenght,video_folder,gma,pas,saying,hashtags,tiktok_on,tik_nam,tik_pas,subreddits,subreddits_weight,), {}, q_worker))
         proc.start()      
         q_worker.get(timeout=timeout)
+        #q_worker.close()
         proc.terminate()
-        q_worker.close()
     except:
         print("timeout or error")
         print(traceback.print_exc())
@@ -183,8 +183,8 @@ def main_with_timeout(numb_of_uploads: int, timeout: int, provider: str, voice: 
         file = open(multip_path, "a+")
         file.write(f"\n{current_time}: multiprocessing timed out")
         file.close()
+        #q_worker.close()
         proc.terminate()
-        q_worker.close()
 
 
 def instagram_upload(nam: str, pas: str):
@@ -274,43 +274,43 @@ if __name__ == "__main__":
 
     #while True:
     
-    main_with_timeout(9,7200,"streamlabs",0,25,"citites-walking-drones",yt_line[0],yt_line[1],"#fedora #gentlemen #fedorafacts #shorts #reddit","#reddit #shorts #stories #story #redditstories #askreddit #fyp #foryou #foryoupage",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    #main_with_timeout(9,18000,"streamlabs",0,25,"citites-walking-drones",yt_line[0],yt_line[1],"#fedora #gentlemen #fedorafacts #shorts #reddit","#reddit #shorts #stories #story #redditstories #askreddit #fyp #foryou #foryoupage",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(9,7200,"streamlabs",0,40,"games",yt_line[2],yt_line[3],"#buzzbuzzbuzz #heartratespiking #redditors #reddit #shorts","#reddit #shorts #stories #story #redditstories #askreddit #fyp #foryou #foryoupage",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    #main_with_timeout(9,18000,"streamlabs",0,40,"games",yt_line[2],yt_line[3],"#buzzbuzzbuzz #heartratespiking #redditors #reddit #shorts","#reddit #shorts #stories #story #redditstories #askreddit #fyp #foryou #foryoupage",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(9,7200,"streamlabs",0,30,"games",yt_line[4],yt_line[5],"#browhat #redditor #reddit #shorts","#reddit #shorts #stories #story #redditstories #askreddit #fyp #foryou #foryoupage",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    #main_with_timeout(4,18000,"streamlabs",0,30,"games",yt_line[4],yt_line[5],"#browhat #redditor #reddit #shorts","#reddit #shorts #stories #story #redditstories #askreddit #fyp #foryou #foryoupage",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(9,7200,"streamlabs",0,40,"gym-fitness",yt_line[6],yt_line[7],"#reddit #shorts #skippedlegday","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    #main_with_timeout(9,18000,"streamlabs",0,40,"gym-fitness",yt_line[6],yt_line[7],"#reddit #shorts #skippedlegday","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(9,7200,"streamlabs",0,30,"citites-walking-drones",yt_line[8],yt_line[9],"Answers from Redditors #backinmyday #reddit #shorts","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    #main_with_timeout(9,18000,"streamlabs",0,30,"citites-walking-drones",yt_line[8],yt_line[9],"Answers from Redditors #backinmyday #reddit #shorts","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
         
-    main_with_timeout(9,7200,"streamlabs",0,35,"gtav",yt_line[10],yt_line[11],"#reddit #shorts #leredditarmie","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    #main_with_timeout(9,18000,"streamlabs",0,35,"gtav",yt_line[10],yt_line[11],"#reddit #shorts #leredditarmie","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(4,3600,"streamlabs",0,40,"gtav",yt_line[12],yt_line[13],"#reddit #shorts","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    #main_with_timeout(4,18000,"streamlabs",0,40,"gtav",yt_line[12],yt_line[13],"#reddit #shorts","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(4,3600,"streamlabs",0,40,"gtav",yt_line[14],yt_line[15],"#shorts #reddit","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    #main_with_timeout(4,18000,"streamlabs",0,40,"gtav",yt_line[14],yt_line[15],"#shorts #reddit","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(4,3600,"streamlabs",0,40,"games",yt_line[16],yt_line[17],"#shorts #progamer #reddit","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    #main_with_timeout(4,18000,"streamlabs",0,40,"games",yt_line[16],yt_line[17],"#shorts #progamer #reddit","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(4,3600,"streamlabs",0,25,"games",yt_line[18],yt_line[19],"reddit is a meme #shorts #meme #reddit #redditmeme","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    #main_with_timeout(4,18000,"streamlabs",0,25,"games",yt_line[18],yt_line[19],"reddit is a meme #shorts #meme #reddit #redditmeme","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(4,3600,"streamlabs",0,40,"gtav",yt_line[20],yt_line[21],"lifes bussin #shorts #bussin #einsteinwaszoomer","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    #main_with_timeout(4,18000,"streamlabs",0,40,"gtav",yt_line[20],yt_line[21],"lifes bussin #shorts #bussin #einsteinwaszoomer","#reddit #shorts #stories #story #redditstories #askreddit #redditmemes #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(4,3600,"streamlabs",0,35,"games",yt_line[22],yt_line[23],'reddit "in real life" experiences #shorts #reddit #internet',"#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    main_with_timeout(4,18000,"streamlabs",0,35,"games",yt_line[22],yt_line[23],'reddit "in real life" experiences #shorts #reddit #internet',"#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(4,3600,"streamlabs",0,35,"citites-walking-drones",yt_line[24],yt_line[25],"hmm its a mystery #shorts #reddit","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    main_with_timeout(4,18000,"streamlabs",0,35,"citites-walking-drones",yt_line[24],yt_line[25],"hmm its a mystery #shorts #reddit","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
     
-    main_with_timeout(4,3600,"streamlabs",0,40,"citites-walking-drones",yt_line[26],yt_line[27],"reddit be capping a lot #shorts #reddit #redditor","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    main_with_timeout(4,18000,"streamlabs",0,40,"citites-walking-drones",yt_line[26],yt_line[27],"reddit be capping a lot #shorts #reddit #redditor","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(4,3600,"streamlabs",0,40,"citites-walking-drones",yt_line[28],yt_line[29],"welcome to the reddit-rice-fields mfkas #shorts #reddit","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    main_with_timeout(4,18000,"streamlabs",0,40,"citites-walking-drones",yt_line[28],yt_line[29],"welcome to the reddit-rice-fields mfkas #shorts #reddit","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(4,3600,"streamlabs",0,40,"citites-walking-drones",yt_line[30],yt_line[31],"buy twitter blue! #reddit #shorts","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    main_with_timeout(4,18000,"streamlabs",0,40,"citites-walking-drones",yt_line[30],yt_line[31],"buy twitter blue! #reddit #shorts","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(4,3600,"streamlabs",0,40,"citites-walking-drones",yt_line[32],yt_line[33],"#shorts #reddit","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    main_with_timeout(4,18000,"streamlabs",0,40,"citites-walking-drones",yt_line[32],yt_line[33],"#shorts #reddit","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(4,3600,"streamlabs",0,25,"citites-walking-drones",yt_line[34],yt_line[35],"just merican things #reddit #shorts","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    main_with_timeout(4,18000,"streamlabs",0,25,"citites-walking-drones",yt_line[34],yt_line[35],"just merican things #reddit #shorts","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
-    main_with_timeout(4,3600,"streamlabs",0,25,"citites-walking-drones",yt_line[36],yt_line[37],"#shorts #reddit","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
+    main_with_timeout(4,18000,"streamlabs",0,25,"citites-walking-drones",yt_line[36],yt_line[37],"#shorts #reddit","#shorts #reddit #stories #story #redditstories #askreddit #FYP #foryou #foryoupage #viral",False,tik_line[0],tik_line[1],["AskReddit","AskMen","AskWomen"],[5,1,1])
 
     current_time = datetime.datetime.now()
     print(f"end of the program: {current_time}")

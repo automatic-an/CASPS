@@ -1,0 +1,7 @@
+2022-12-03 03:22:07.409757: creating the final mp4 failed
+2022-12-03 04:09:29.596750: creating the final mp4 failed
+2022-12-03 06:40:49.552937: creating the final mp4 failed
+2022-12-04 21:11:32.392802: creating the final mp4 failed
+2022-12-04 21:15:40.316610: creating the final mp4 failed
+2022-12-04 22:35:26.017641: creating the final mp4 failed
+2022-12-04 23:42:24.535721: creating the final mp4 failed
