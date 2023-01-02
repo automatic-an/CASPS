@@ -1,7 +1,7 @@
 import sys
 import re
 from ntpath import realpath
-import requests, base64, random, argparse, os, playsound
+import requests, base64, random, argparse, os
 from gtts import gTTS
 from boto3 import Session
 from botocore.exceptions import BotoCoreError, ClientError, ProfileNotFound

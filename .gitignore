@@ -2,3 +2,8 @@
 contentBot/assets/*
 accounts_tik.txt
 accounts_yt.txt
+reddit/__pycache__/
+utils/__pycache__/
+video_creation/__pycache__/
+__pycache__
+verify.txt
